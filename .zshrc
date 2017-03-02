@@ -52,6 +52,10 @@ ENABLE_CORRECTION="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
+
+bindkey "^P" up-line-or-search
+bindkey "^N" down-line-or-search
+
 # User configuration
 
 export PATH="/home/gabo/.cask/bin:/home/gabo/my_scripts:$PATH"
@@ -99,8 +103,8 @@ alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in mb
 alias np='nano pkgbuild'
 #alias emacs='emacs -nw'
-alias shared='cd /mnt/shared'
-alias dbox='cd /mnt/shared/dropbox'
+alias shared='cd /mnt/Shared'
+alias dbox='cd /mnt/Shared/dropbox'
 alias open='xdg-open'
 alias ldir='ls -d */'
 #alias rm='rm -i'
