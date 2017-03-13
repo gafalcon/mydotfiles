@@ -6,8 +6,8 @@ export EDITOR="emacsclient -t"
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="robbyrussell"
-ZSH_THEME="gianu"
+# ZSH_THEME="gianu"
+ZSH_THEME="agnoster"
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -113,6 +113,10 @@ alias processing='/mnt/shared/processing-2.2.1/processing'
 alias ofnew='/mnt/shared/programs/openframeworks_0.8.4/apps/projectgenerator/projectgeneratorsimple/bin/projectgeneratorsimple'
 alias swapcaps='/usr/bin/setxkbmap -option "ctrl:swapcaps"'
 alias guitarpro='wine ~/.wine/drive_c/Program\ Files/Guitar\ Pro\ 6/GuitarPro.exe'
+
+open_mute (){
+    xdg-open $1 > /dev/null 2>&1 &
+}
 # ex - archive extractor
 # usage: ex <file>
 ex ()
@@ -158,3 +162,5 @@ export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1
 #export PATH="$PATH:/opt/lampp/bin" # Add lampp bin to PATH
 #export PATH="$PATH:$HOME/.composer/vendor/bin" # php composer commands
 #export LD_LIBRARY_PATH=/usr/local/lib
+eval "$(fasd --init auto)"
+alias o="a -e xdg-open"
