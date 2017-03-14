@@ -47,50 +47,50 @@ xterm*VT100.Translations: #override \
 #define _foreground    #dcdccc
 #define _background    #1f1f1f
 #define _cursorColor   #8faf9f
-URxvt*color0         : _color0
-URxvt*color1         : _color1
-URxvt*color2         : _color2
-URxvt*color3         : _color3
-URxvt*color4         : _color4
-URxvt*color5         : _color5
-URxvt*color6         : _color6
-URxvt*color7         : _color7
-URxvt*color8         : _color8
-URxvt*color9         : _color9
-URxvt*color10        : _color10
-URxvt*color11        : _color11
-URxvt*color12        : _color12
-URxvt*color13        : _color13
-URxvt*color14        : _color14
-URxvt*color15        : _color15
-URxvt*colorBD        : _colorBD
-URxvt*colorIT        : _colorIT
-URxvt*colorUL        : _colorUL
-URxvt*foreground     : _foreground
-URxvt*background     : _background
-URxvt*cursorColor    : _cursorColor
-XTerm*color0         : _color0
-XTerm*color1         : _color1
-XTerm*color2         : _color2
-XTerm*color3         : _color3
-XTerm*color4         : _color4
-XTerm*color5         : _color5
-XTerm*color6         : _color6
-XTerm*color7         : _color7
-XTerm*color8         : _color8
-XTerm*color9         : _color9
-XTerm*color10        : _color10
-XTerm*color11        : _color11
-XTerm*color12        : _color12
-XTerm*color13        : _color13
-XTerm*color14        : _color14
-XTerm*color15        : _color15
-XTerm*colorBD        : _colorBD
-XTerm*colorIT        : _colorIT
-XTerm*colorUL        : _colorUL
-XTerm*foreground     : _foreground
-XTerm*background     : _background
-XTerm*cursorColor : _cursorColor
+! URxvt*color0         : _color0
+! URxvt*color1         : _color1
+! URxvt*color2         : _color2
+! URxvt*color3         : _color3
+! URxvt*color4         : _color4
+! URxvt*color5         : _color5
+! URxvt*color6         : _color6
+! URxvt*color7         : _color7
+! URxvt*color8         : _color8
+! URxvt*color9         : _color9
+! URxvt*color10        : _color10
+! URxvt*color11        : _color11
+! URxvt*color12        : _color12
+! URxvt*color13        : _color13
+! URxvt*color14        : _color14
+! URxvt*color15        : _color15
+! URxvt*colorBD        : _colorBD
+! URxvt*colorIT        : _colorIT
+! URxvt*colorUL        : _colorUL
+! URxvt*foreground     : _foreground
+! URxvt*background     : _background
+! URxvt*cursorColor    : _cursorColor
+! XTerm*color0         : _color0
+! XTerm*color1         : _color1
+! XTerm*color2         : _color2
+! XTerm*color3         : _color3
+! XTerm*color4         : _color4
+! XTerm*color5         : _color5
+! XTerm*color6         : _color6
+! XTerm*color7         : _color7
+! XTerm*color8         : _color8
+! XTerm*color9         : _color9
+! XTerm*color10        : _color10
+! XTerm*color11        : _color11
+! XTerm*color12        : _color12
+! XTerm*color13        : _color13
+! XTerm*color14        : _color14
+! XTerm*color15        : _color15
+! XTerm*colorBD        : _colorBD
+! XTerm*colorIT        : _colorIT
+! XTerm*colorUL        : _colorUL
+! XTerm*foreground     : _foreground
+! XTerm*background     : _background
+! XTerm*cursorColor : _cursorColor
 ! URxvt.font: xft:Droid Sans Mono:size=8
 URxvt.font: xft:Droid Sans Mono for Powerline:size=8
 ! do not scroll with output
@@ -125,3 +125,59 @@ rofi.color-window: argb:aa263238, argb:aa263238, #26a69a
 rofi.color-normal: argb:0263238, #eceff1, argb:0263238, #f4246b, #eceff1
 rofi.color-active: #fdf6e3, #268bd2, #eee8d5, #268bd2, #fdf6e3
 rofi.color-urgent: #fdf6e3, #dc322f, #eee8d5, #dc322f, #fdf6e3
+
+
+! Base16 3024
+! Scheme: Jan T. Sott (http://github.com/idleberg)
+
+#define base00 #090300
+#define base01 #3a3432
+#define base02 #4a4543
+#define base03 #5c5855
+#define base04 #807d7c
+#define base05 #a5a2a2
+#define base06 #d6d5d4
+#define base07 #f7f7f7
+#define base08 #db2d20
+#define base09 #e8bbd0
+#define base0A #fded02
+#define base0B #01a252
+#define base0C #b5e4f4
+#define base0D #01a0e4
+#define base0E #a16a94
+#define base0F #cdab53
+
+*.foreground:   base05
+#ifdef background_opacity
+*.background:   [background_opacity]base00
+#else
+*.background:   base00
+#endif
+*.cursorColor:  base05
+
+*.color0:       base00
+*.color1:       base08
+*.color2:       base0B
+*.color3:       base0A
+*.color4:       base0D
+*.color5:       base0E
+*.color6:       base0C
+*.color7:       base05
+
+*.color8:       base03
+*.color9:       base08
+*.color10:      base0B
+*.color11:      base0A
+*.color12:      base0D
+*.color13:      base0E
+*.color14:      base0C
+*.color15:      base07
+
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+*.color16:      base09
+*.color17:      base0F
+*.color18:      base01
+*.color19:      base02
+*.color20:      base04
+*.color21:      base06
