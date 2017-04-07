@@ -148,7 +148,7 @@ assign [class ="spotify"] 8
 bindsym $mod+1 workspace $workspace1
 bindsym $mod+2 workspace $workspace2
 bindsym $mod+F1 workspace $workspace2
-bindsym Mod1+F1 workspace $workspace2
+bindsym Mod1+F1 workspace 9
 bindsym $mod+3 workspace 3
 bindsym $mod+4 workspace 4
 bindsym $mod+5 workspace 5
@@ -171,6 +171,7 @@ bindsym $mod+Ctrl+5 move container to workspace number 5
 bindsym $mod+Ctrl+6 move container to workspace number 6
 bindsym $mod+Ctrl+7 move container to workspace number 7
 bindsym $mod+Ctrl+8 move container to workspace number 8
+bindsym $mod+Ctrl+9 move container to workspace number 9
 
 # Move to workspace with focused container
 bindsym $mod+Shift+1 move container to workspace $workspace1; workspace $workspace1
@@ -181,6 +182,7 @@ bindsym $mod+Shift+5 move container to workspace number 5; workspace 5
 bindsym $mod+Shift+6 move container to workspace number 6; workspace 6
 bindsym $mod+Shift+7 move container to workspace number 7; workspace 7
 bindsym $mod+Shift+8 move container to workspace number 8; workspace 8
+bindsym $mod+Shift+9 move container to workspace number 9; workspace 9
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
