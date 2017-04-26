@@ -38,6 +38,7 @@ bindsym $mod+Shift+q kill
 #bindsym $mod+d exec dmenu_run
 #bindsym Mod1+F2 exec --no-startup-id dmenu_recency
 bindsym Mod1+F2 exec --no-startup-id rofi -show run
+bindsym $mod+z exec --no-startup-id morc_menu
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -53,7 +54,7 @@ exec --no-startup-id emacs
 exec --no-startup-id firefox
 exec --no-startup-id cerebro
 exec --no-startup-id udiskie
-exec --no-startup-id polybar example
+exec --no-startup-id polybar main_bar
 bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 
 # Start Applications
@@ -71,7 +72,7 @@ bindsym $mod+Print --release exec "scrot -ue 'mv $f ~/Screenshots'; sleep 1; exe
 bindsym $mod+Shift+Print --release exec "notify-send 'selection will be saved to ~/Screenshots'; scrot -se 'mv $f ~/Screenshots'"
 bindsym $mod+Ctrl+x exec xkill
 bindsym Mod1+F1 exec --no-startup-id "~/my_scripts/run_or_raise_terminal"
-
+bindsym $mod+F1 [class="URxvt"] move workspace current
 #bindsym Mod1+Tab focus right
 bindsym Mod1+Tab exec rofi -show window
 bindsym Mod1+Shift+Tab focus left
@@ -140,6 +141,7 @@ bindsym $mod+a focus parent
 set $workspace1 	"1: "
 set $workspace2 	"2: "
 
+for_window [urgent=latest] focus
 assign [class ="Firefox"] $workspace1
 assign [class ="Emacs"] $workspace2
 assign [class ="stremio"] 3
@@ -147,7 +149,7 @@ assign [class ="spotify"] 8
 
 bindsym $mod+1 workspace $workspace1
 bindsym $mod+2 workspace $workspace2
-bindsym $mod+F1 workspace $workspace2
+
 # bindsym Mod1+F1 workspace 9
 bindsym $mod+3 workspace 3
 bindsym $mod+4 workspace 4
@@ -289,11 +291,9 @@ exec --no-startup-id syndaemon -i 1 -k -d
 # exec --no-startup-id blueman
 # exec_always --no-startup-id sbxkb
 exec --no-startup-id compton -b
-#exec --no-startup-id .conky/start_conky_live_grey
-# exec --no-startup-id .conky/start_conky_live_green
 # exec --no-startup-id yakuake 
 exec --no-startup-id dropbox start
-exec --no-startup-id urxvt
+exec --no-startup-id urxvt -e tmux
 # for_window [instance="yakuake"] floating enable;
 # for_window [instance="yakuake"] move scratchpad; [instance="yakuake"] scratchpad show; move position 0px 3px; move scratchpad
  
@@ -373,32 +373,63 @@ focus_follows_mouse yes
 #
 # You can use these variables anywhere in the i3 configuration file.
 
-set $base00 #090300
-set $base01 #3a3432
-set $base02 #4a4543
-set $base03 #5c5855
-set $base04 #807d7c
-set $base05 #a5a2a2
-set $base06 #d6d5d4
-set $base07 #f7f7f7
-set $base08 #db2d20
-set $base09 #e8bbd0
-set $base0A #fded02
-set $base0B #01a252
-set $base0C #b5e4f4
-set $base0D #01a0e4
-set $base0E #a16a94
-set $base0F #cdab53
+# set $base00 #090300
+# set $base01 #3a3432
+# set $base02 #4a4543
+# set $base03 #5c5855
+# set $base04 #807d7c
+# set $base05 #a5a2a2
+# set $base06 #d6d5d4
+# set $base07 #f7f7f7
+# set $base08 #db2d20
+# set $base09 #e8bbd0
+# set $base0A #fded02
+# set $base0B #01a252
+# set $base0C #b5e4f4
+# set $base0D #01a0e4
+# set $base0E #a16a94
+# set $base0F #cdab53
 
-# Basic color configuration using the Base16 variables for windows and borders.
-# Property Name         Border  BG      Text    Indicator Child Border
-client.focused          $base05 $base0D $base00 $base0D $base0D
-client.focused_inactive $base01 $base01 $base05 $base03 $base01
-client.unfocused        $base01 $base00 $base05 $base01 $base01
-client.urgent           $base08 $base08 $base00 $base08 $base08
-client.placeholder      $base00 $base00 $base05 $base00 $base00
-client.background       $base07
+# # Basic color configuration using the Base16 variables for windows and borders.
+# # Property Name         Border  BG      Text    Indicator Child Border
+# client.focused          $base05 $base0D $base00 $base0D $base0D
+# client.focused_inactive $base01 $base01 $base05 $base03 $base01
+# client.unfocused        $base01 $base00 $base05 $base01 $base01
+# client.urgent           $base08 $base08 $base00 $base08 $base08
+# client.placeholder      $base00 $base00 $base05 $base00 $base00
+# client.background       $base07
 
+
+# Colors set from ~/.Xresources
+set_from_resource	$background	background
+set_from_resource	$foreground	foreground
+set_from_resource	$color0		color0
+set_from_resource 	$color1 	color1
+set_from_resource 	$color2 	color2
+set_from_resource 	$color3 	color3
+set_from_resource 	$color4 	color4
+set_from_resource 	$color5 	color5
+set_from_resource 	$color6		color6
+set_from_resource	$color7		color7
+set_from_resource	$color8		color8
+set_from_resource	$color9		color9
+set_from_resource	$color10	color10
+set_from_resource	$color11	color11
+set_from_resource	$color12	color12
+set_from_resource	$color13	color13
+set_from_resource	$color14	color14
+set_from_resource	$color15	color15
+
+# Theme colors
+# class                 border  	backgr. 	text    	indic.  	child_border
+# My colors
+client.background	$background
+
+client.focused         	$foreground	$background	$foreground	$color7		$color7	
+client.unfocused       	$foreground	$background	$foreground	$background	$background
+client.focused_inactive	$foreground	$background	$foreground	$background	$background
+client.urgent		$foreground	$background	$foreground	$background	$background
+client.placeholder	$foreground	$background	$foreground	$background	$background
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
