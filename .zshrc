@@ -50,7 +50,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git emacs web-search thefuck)
+plugins=(git web-search thefuck)
 
 
 bindkey "^P" up-line-or-search
@@ -142,9 +142,6 @@ ex ()
   fi
 }
 
-# prompt
-#PS1='[\u@\h \W]\$ '
-# screenfetch -d '-gpu'
 neofetch
 # better yaourt colors
 export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1;41;5:votes=1;44:dsc=0:other=1;35"
@@ -164,3 +161,9 @@ export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1
 #export LD_LIBRARY_PATH=/usr/local/lib
 eval "$(fasd --init auto)"
 alias o="a -e xdg-open"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/mnt/Shared/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/mnt/Shared/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/mnt/Shared/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/mnt/Shared/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
