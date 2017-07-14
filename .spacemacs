@@ -338,6 +338,19 @@ you should place your code here."
 
   ;; (define-key yas-minor-mode-map (kbd "<C-return>") 'yas-expand)
   (define-key evil-insert-state-map (kbd "<C-return>") 'hippie-exand)
+  (setq org-agenda-files '("/mnt/Shared/Dropbox/orgfiles/"))
+
+  (with-eval-after-load 'org
+    ;; here goes your Org config :)
+    ;; ....
+    (setq org-agenda-custom-commands
+          '(("c" "Simple agenda view"
+             ((tags "PRIORITY=\"A\""
+                    ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
+                     (org-agenda-overriding-header "High-priority unfinished tasks:")))
+              (agenda "")
+              (alltodo "")))))
+    )
   )
 
 
