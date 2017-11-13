@@ -382,6 +382,9 @@ before packages are loaded."
 
   ;; (define-key yas-minor-mode-map (kbd "<C-return>") 'yas-expand)
   (define-key evil-insert-state-map (kbd "<C-return>") 'hippie-exand)
+
+  (with-eval-after-load 'org
+    (add-hook 'org-mode-hook #'visual-line-mode))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
