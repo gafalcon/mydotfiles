@@ -161,9 +161,7 @@ export PATH="$PATH:$HOME/.config/composer/vendor/bin" # php composer commands
 #export LD_LIBRARY_PATH=/usr/local/lib
 eval "$(fasd --init auto)"
 alias o="a -e xdg-open"
-
-# The next line updates PATH for the Google Cloud SDK.
-# if [ -f '/mnt/Shared/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/mnt/Shared/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# # The next line enables shell command completion for gcloud.
-# if [ -f '/mnt/Shared/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/mnt/Shared/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+alias feh="feh -."
+# export PATH="/home/gabo/.pyenv/bin:$PATH:/home/gabo/go/bin"
+# eval "$(pyenv init -)"
+# eval "$(pyenv virtualenv-init -)"

@@ -54,6 +54,7 @@ exec --no-startup-id emacs
 exec --no-startup-id firefox
 exec --no-startup-id udiskie
 exec --no-startup-id polybar main_bar
+exec --no-startup-id dunst
 bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 
 # Start Applications
