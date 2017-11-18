@@ -162,6 +162,6 @@ export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1
 eval "$(fasd --init auto)"
 alias o="a -e xdg-open"
 alias feh="feh -."
-export PATH="/home/gabo/.pyenv/bin:$PATH"
+export PATH="/home/gabo/.pyenv/bin:$PATH:/home/gabo/go/bin"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
