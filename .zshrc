@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/gabo/.oh-my-zsh
+ZSH=/usr/share/oh-my-zsh/
 export ALTERNATE_EDITOR=""
 export EDITOR="emacsclient -t"
 # Set name of the theme to load.
@@ -157,13 +157,13 @@ export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1
 # alias android-studio='/mnt/Shared/Programs/android-studio/bin/studio.sh'
 #export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 #export PATH="$PATH:/opt/lampp/bin" # Add lampp bin to PATH
-#export PATH="$PATH:$HOME/.composer/vendor/bin" # php composer commands
+export PATH="$PATH:$HOME/.config/composer/vendor/bin" # php composer commands
 #export LD_LIBRARY_PATH=/usr/local/lib
 eval "$(fasd --init auto)"
 alias o="a -e xdg-open"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/mnt/Shared/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/mnt/Shared/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+# if [ -f '/mnt/Shared/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/mnt/Shared/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
-# The next line enables shell command completion for gcloud.
-if [ -f '/mnt/Shared/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/mnt/Shared/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+# # The next line enables shell command completion for gcloud.
+# if [ -f '/mnt/Shared/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/mnt/Shared/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
