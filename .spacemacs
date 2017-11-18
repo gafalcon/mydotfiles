@@ -385,6 +385,9 @@ before packages are loaded."
 
   (with-eval-after-load 'org
     (add-hook 'org-mode-hook #'visual-line-mode))
+
+  (spacemacs/set-leader-keys
+    "bq" 'kill-buffer-and-window)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
