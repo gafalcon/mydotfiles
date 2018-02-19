@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-ZSH=/usr/share/oh-my-zsh/
+ZSH=~/.oh-my-zsh/
 export ALTERNATE_EDITOR=""
 export EDITOR="emacsclient -t"
 # Set name of the theme to load.
