@@ -50,7 +50,7 @@ bindsym $mod+z exec --no-startup-id morc_menu
 ################################################################################################
 
 exec --no-startup-id volumeicon
-exec --no-startup-id emacs
+# exec --no-startup-id emacs
 exec --no-startup-id firefox
 exec --no-startup-id udiskie
 exec --no-startup-id polybar main_bar
@@ -142,8 +142,8 @@ set $workspace1 	"1: "
 set $workspace2 	"2: "
 
 for_window [urgent=latest] focus
-assign [class ="Firefox"] $workspace1
-assign [class ="Emacs"] $workspace2
+# assign [class ="Firefox"] $workspace1
+# assign [class ="Emacs"] $workspace2
 assign [class ="stremio"] 3
 assign [class ="spotify"] 8
 
