@@ -53,9 +53,11 @@ ENABLE_CORRECTION="true"
 plugins=(git web-search thefuck)
 
 
-bindkey "^P" up-line-or-search
-bindkey "^N" down-line-or-search
+bindkey "^P" up-line-or-beginning-search
+bindkey "^N" down-line-or-beginning-search
 
+# bindkey "^P" up-line-or-search
+# bindkey "^N" down-line-or-search
 # User configuration
 
 export PATH="/home/gabo/.cask/bin:/home/gabo/my_scripts:$PATH"
@@ -165,3 +167,7 @@ alias feh="feh -."
 # export PATH="/home/gabo/.pyenv/bin:$PATH:/home/gabo/go/bin"
 # eval "$(pyenv init -)"
 # eval "$(pyenv virtualenv-init -)"
+
+export WORKON_HOME=$HOME/python_envs
+export PROJECT_HOME=$HOME/Devel
+source /usr/bin/virtualenvwrapper.sh
