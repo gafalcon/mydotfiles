@@ -245,7 +245,7 @@ for_window [class="Simple-scan"] floating enable border normal
 for_window [class="(?i)System-config-printer.py"] floating enable border normal
 for_window [class="Skype"] floating enable border normal
 for_window [class="Thus"] floating enable border normal
-
+form window [class="Firefox" window_role="About"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="Cerebro"] floating enable
 # for_window [class="(?i)virtualbox"] floating enable border normal
@@ -279,6 +279,16 @@ mode "$mode_music" {
     bindsym Escape mode "default"
 
 }
+
+bindsym $mod+d mode "$monitors"
+set $monitors (s)ame as, (r)ight of
+mode "$monitors" {
+     bindsym s exec --no-startup-id "~/my_scripts/monitor_same"
+     bindsym r exec --no-startup-id "~/my_scripts/connect_monitor_right"
+     bindsym Escape mode "default"
+     bindsym Return mode "default"
+}
+
 # Autostart applications
 #exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b
