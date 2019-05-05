@@ -1,0 +1,66 @@
+# Dunst (Notifications)
+- dunst close notification = alt+space
+- dunst notification history = ctrl+super+h
+- dunst notification context menu = ctrl+alt+c
+
+# I3
+alsamixer = super+ctrl+m
+pcmanfm = super+F3
+gksu pcmanfm = super+shift+F3
+bmenu = super+ctrl+b
+music mocp = super+F5
+screenshot window = super+Print
+screenshot region = super+shift+Print
+xkill window = super+ctrl+x
+
+i3 workspace back and forth = super+n
+move workspace back n forth = super+shift+n
+fullscreen = super+f
+layout stacking = super+s
+layout tabbed = super+w
+move to scratchpad = super+shift+minus
+scratchpad show = super+minus
+workspace next = super+ctrl+right
+workspace prev = super+ctrl+left
+gaps mode = super+shift+g
+
+# Vimium/Firefox
+open url = o
+open url new tab = O
+search open tabs = T
+(type) edit current url = ge
+(type) edit current url (new tab) = gE
+history prev = H
+history forwd = L
+
+tab left = J
+(type) tab left = gT
+tab right = K
+(type) tab right = gt
+(type) prev tab = gl
+duplicate tab = yt
+close tab = x
+restore tab = X
+move to new window = W
+
+yy = copy url to clipboard
+open clipboard url = p
+open clipboard new tab = P 
+(type) go up url hierarchy = gu
+(type) go root = gU
+(type) copy link to clipboard = yf
+(type) select main frame = gF
+(type) select next frame = gf
+help = ?
+
+mute audio = ctrl+m
+change to prev tab group = ctrl+shift+F8
+open group tabs popup = F8
+
+video increase speed = num +
+video decrease speed = num -
+video preferred speed = num *
+
+# Emacs
+
+# TMUX
