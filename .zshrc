@@ -168,6 +168,6 @@ alias feh="feh -."
 # eval "$(pyenv init -)"
 # eval "$(pyenv virtualenv-init -)"
 
-export WORKON_HOME=$HOME/python_envs
+export WORKON_HOME=$HOME/virtualenvs
 export PROJECT_HOME=$HOME/Devel
 source /usr/bin/virtualenvwrapper.sh
