@@ -1,0 +1,50 @@
+
+* Packages
+rofi
+zsh
+feh
+neofetch
+python-pip
+fasd
+polybar
+udiskie
+playerctl
+# Others
+
+* Repos
+- git clone https://github.com/gafalcon/my_scripts.git
+* Zsh
+- package zsh
+- chsh -s /bin/zsh
+- ln -s mydotfiles/.zsh .zsh
+** Oh my zsh
+   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+* Emacs
+- sudo pacman -S emacs
+- git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+- sudo ln -s mydotfiles/.spacemacs .spacemacs
+* Firefox
+- sudo pacman -S firefox
+* Pip packages
+sudo pip install virtualenvwrapper
+* Polybar
+- copy configuration and remove border and margin
+- polybar example
+* Shell
+- sudo pacman -S tmux
+- ln -s mydotfiles/.tmux.conf .tmux.conf
+- Install powerline: pip install powerline-status
+* Fixes
+- keyboard layout: Dirty fix: setxkbmap -layout es. On i3 config file
+- Time: enable ntpd with systemd. Then /sudo timedatectl set-ntp true/
+** TODO Mic jack noise
+   Go to alsamixer and disable auto-mute mode
+   Then sudo alsactl store
+** Nitrogen not always restores background
+* Development
+** Node
+   - sudo pacman -S nodejs npm
+** C/C++
+** Global gtags
+  - sudo pacman -S ctags python-pygments
+  - See spacemacs help on gtags
