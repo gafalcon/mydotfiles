@@ -53,11 +53,10 @@ exec --no-startup-id volumeicon
 # exec --no-startup-id emacs
 exec --no-startup-id firefox
 exec --no-startup-id udiskie
-exec --no-startup-id "~/my_scripts/launch_polybar"
-# exec --no-startup-id polybar main_bar
+# exec --no-startup-id "~/my_scripts/launch_polybar"
+exec --no-startup-id polybar example
 exec --no-startup-id dunst
 bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
-
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+F2 exec firefox
@@ -73,7 +72,7 @@ bindsym $mod+Print --release exec "scrot -ue 'mv $f ~/Screenshots'; sleep 1; exe
 bindsym $mod+Shift+Print --release exec "notify-send 'selection will be saved to ~/Screenshots'; scrot -se 'mv $f ~/Screenshots'"
 bindsym $mod+Ctrl+x exec xkill
 bindsym Mod1+F1 exec --no-startup-id "~/my_scripts/run_or_raise_terminal"
-bindsym $mod+F1 [class="URxvt"] move workspace current
+bindsym $mod+F1 [class="URxvt"] move workspace current; [class="URxvt"] focus
 #bindsym Mod1+Tab focus right
 bindsym Mod1+Tab exec rofi -show window
 bindsym Mod1+Shift+Tab focus left
@@ -245,7 +244,7 @@ for_window [class="Simple-scan"] floating enable border normal
 for_window [class="(?i)System-config-printer.py"] floating enable border normal
 for_window [class="Skype"] floating enable border normal
 for_window [class="Thus"] floating enable border normal
-form window [class="Firefox" window_role="About"] floating enable border normal
+for_window [class="Firefox" window_role="About"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="Cerebro"] floating enable
 # for_window [class="(?i)virtualbox"] floating enable border normal
@@ -291,11 +290,11 @@ mode "$monitors" {
 
 # Autostart applications
 #exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id clipit
-exec --no-startup-id /usr/bin/setxkbmap -option "ctrl:swapcaps"
+exec --no-startup-id /usr/bin/setxkbmap -layout es -option "ctrl:swapcaps"
+# exec --no-startup-id /usr/bin/setxkbmap 
 #Disable touchpad while typing
 exec --no-startup-id syndaemon -i 1 -k -d
 # exec --no-startup-id blueman
@@ -480,3 +479,4 @@ client.placeholder	$foreground	$background	$foreground	$background	$background
 # #         urgent_workspace	#ffc107ff  $ffc107ff    $37474fff
 # #     }
 #  }
+exec --no-startup-id nitrogen --restore >> /home/gabo/nitrogenoutput; sleep 1; compton -b
