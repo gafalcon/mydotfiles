@@ -27,24 +27,36 @@ playerctl
 - sudo pacman -S firefox
 * Pip packages
 sudo pip install virtualenvwrapper
-* Polybar
+* TODO Polybar
 - copy configuration and remove border and margin
 - polybar example
 * Shell
 - sudo pacman -S tmux
 - ln -s mydotfiles/.tmux.conf .tmux.conf
 - Install powerline: pip install powerline-status
+* Fstab
+  UUID=D0A47F68A47F4FC8   /mnt/Shared  ntfs-3g   uid=1000,gid=1000,dmask=022,fmask=022 0 0
 * Fixes
 - keyboard layout: Dirty fix: setxkbmap -layout es. On i3 config file
 - Time: enable ntpd with systemd. Then /sudo timedatectl set-ntp true/
-** TODO Mic jack noise
+** DONE Mic jack noise
+   CLOSED: [2019-08-29 Thu 13:45]
    Go to alsamixer and disable auto-mute mode
    Then sudo alsactl store
 ** Nitrogen not always restores background
 * Development
-** Node
+** Node/Javascript
    - sudo pacman -S nodejs npm
+   - sudo npm i -g tern
+*** Angular
+    - angular-cli: To create app, serve, create components, services, etc
+    - spacemacs: typescript layer
+**** Tutorials
+     https://coursetro.com/posts/code/174/Angular-8-Tutorial-&-Crash-Course check ~/Documents/Web/angular/myapp
 ** C/C++
 ** Global gtags
   - sudo pacman -S ctags python-pygments
   - See spacemacs help on gtags
+** Java
+   - lts version 11: jdk11-openjdk
+   - spring-boot-cli: Just download the gz extract and add file to /opt/. Follow the INSTALL instructions
