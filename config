@@ -77,6 +77,9 @@ bindsym $mod+F1 [class="URxvt"] move workspace current; [class="URxvt"] focus
 bindsym Mod1+Tab exec rofi -show window
 bindsym Mod1+Shift+Tab focus left
 
+bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
+bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
+
 # change focus
 bindsym $mod+j focus down
 bindsym $mod+k focus up
@@ -479,4 +482,5 @@ client.placeholder	$foreground	$background	$foreground	$background	$background
 # #         urgent_workspace	#ffc107ff  $ffc107ff    $37474fff
 # #     }
 #  }
-exec --no-startup-id nitrogen --restore >> /home/gabo/nitrogenoutput; sleep 1; compton -b
+# exec --no-startup-id nitrogen --restore >> /home/gabo/nitrogenoutput; sleep 1; compton -b
+exec --no-startup-id feh --bg-fill $(head -n 2 .config/nitrogen/bg-saved.cfg | tail -n 1 | cut -c 6-) 

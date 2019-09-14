@@ -44,6 +44,7 @@ sudo pip install virtualenvwrapper
    Go to alsamixer and disable auto-mute mode
    Then sudo alsactl store
 ** Nitrogen not always restores background
+   exec --no-startup-id feh --bg-fill $(head -n 2 .config/nitrogen/bg-saved.cfg | tail -n 1 | cut -c 6-) 
 * Development
 ** Node/Javascript
    - sudo pacman -S nodejs npm
@@ -60,3 +61,8 @@ sudo pip install virtualenvwrapper
 ** Java
    - lts version 11: jdk11-openjdk
    - spring-boot-cli: Just download the gz extract and add file to /opt/. Follow the INSTALL instructions
+* Apps
+** Dropbox
+   - Store epub books to read on tablet
+   - yay -S dropbox
+   - thunar-dropbox if want thunar integration
