@@ -61,6 +61,10 @@ sudo pip install virtualenvwrapper
 ** Java
    - lts version 11: jdk11-openjdk
    - spring-boot-cli: Just download the gz extract and add file to /opt/. Follow the INSTALL instructions
+** Little os book
+   - sudo pacman -S nasm cdrkit
+   - yay -S bochs-sdl
+** linux419-headers
 * Apps
 ** Dropbox
    - Store epub books to read on tablet
