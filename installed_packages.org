@@ -61,10 +61,71 @@ sudo pip install virtualenvwrapper
 ** Java
    - lts version 11: jdk11-openjdk
    - spring-boot-cli: Just download the gz extract and add file to /opt/. Follow the INSTALL instructions
+   - gradle: sudo pacman -S gradle
+   - eclipse-common, eclipse-java. 
+*** Spring Boot
+**** IDEs 
+    - Eclipse: Install spring tools 4 from the marketplace
+**** DB
+***** Create Schema
+      Use hibernate annotations:
+      - https://howtodoinjava.com/hibernate/hibernate-many-to-many-mapping-using-annotations/
+      - https://stackoverflow.com/questions/6378526/org-hibernate-persistentobjectexception-detached-entity-passed-to-persist
+***** Mysql
+      Create db first.
+      Then add configs in application properties
+      https://www.callicoder.com/spring-boot-rest-api-tutorial-with-mysql-jpa-hibernate/
+**** Rest Controller
+     
 ** Little os book
    - sudo pacman -S nasm cdrkit
    - yay -S bochs-sdl
 ** linux419-headers
+** docker
+*** Installation
+    https://wiki.archlinux.org/index.php/Docker
+    pacman -S docker
+**** Add to docker group (security warning!)
+     $ sudo groupadd docker
+     $ sudo usermod -aG docker $USER
+     $ newgrp docker 
+*** Commands
+    ## List Docker CLI commands
+    docker
+    docker container --help
+   
+    ## Display Docker version and info
+    docker --version
+    docker version
+    docker info
+
+    ## Execute Docker image
+    docker run hello-world
+    
+    ## List Docker images
+    docker image ls
+    
+    ## List Docker containers (running, all, all in quiet mode)
+    docker container ls
+    docker container ls --all
+    docker container ls -aq
+
+    # Resume stopped container
+    docker start container_name
+    # Stop container
+    docker stop container_name
+    # Delete contianer
+    docker rm container_name
+*** mysql
+    - docker pull mysql #To download docker image
+    - sudo docker run -p 3306:3306 --name=container_name -e MYSQL_ROOT_PASSWORD=passowrd -d mysql #to run a new container with  mysql
+    - docker exec -it mysq_container mysql -uroot -p #to run mysql repl
+    - docker logs mysql_container #See output from container
+** dbeaver
+   pacman -S dbeaver
+*** Publick key Retrieval not allowed
+    https://stackoverflow.com/questions/42880479/cant-connect-to-mysql-container-from-localhost
+
 * Apps
 ** Dropbox
    - Store epub books to read on tablet
