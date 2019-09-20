@@ -76,7 +76,11 @@ sudo pip install virtualenvwrapper
       Then add configs in application properties
       https://www.callicoder.com/spring-boot-rest-api-tutorial-with-mysql-jpa-hibernate/
 **** Rest Controller
-     
+     @GetMapping("url") , @PostMapping("url")
+     @RequestBody ClassName obj: to get json post body. 
+     @RequestBody Map<String, Obj> params: if dont wanna create a class for the json post
+     @RequestBody Map<String, Obj> []params: if dont wanna create a class for the json array
+
 ** Little os book
    - sudo pacman -S nasm cdrkit
    - yay -S bochs-sdl
@@ -125,7 +129,8 @@ sudo pip install virtualenvwrapper
    pacman -S dbeaver
 *** Publick key Retrieval not allowed
     https://stackoverflow.com/questions/42880479/cant-connect-to-mysql-container-from-localhost
-
+** Postman
+   yay -S postman
 * Apps
 ** Dropbox
    - Store epub books to read on tablet
