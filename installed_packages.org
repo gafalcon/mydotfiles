@@ -1,4 +1,6 @@
 
+* Install manjaro
+  https://gist.github.com/mauri870/5a54e415140875b9150ca31c491811f6
 * Packages
 rofi
 zsh
@@ -43,8 +45,13 @@ sudo pip install virtualenvwrapper
    CLOSED: [2019-08-29 Thu 13:45]
    Go to alsamixer and disable auto-mute mode
    Then sudo alsactl store
-** Nitrogen not always restores background
+** DONE Nitrogen not always restores background
+   CLOSED: [2019-10-01 Tue 15:02]
    exec --no-startup-id feh --bg-fill $(head -n 2 .config/nitrogen/bg-saved.cfg | tail -n 1 | cut -c 6-) 
+** TODO Backlight
+   - Install light
+   - Add user to video group
+   - Change the key shortcuts
 * Development
 ** Node/Javascript
    - sudo pacman -S nodejs npm
@@ -55,6 +62,12 @@ sudo pip install virtualenvwrapper
 **** Tutorials
      https://coursetro.com/posts/code/174/Angular-8-Tutorial-&-Crash-Course check ~/Documents/Web/angular/myapp
 ** C/C++
+*** pacman -S gdb
+*** Makefiles
+    - http://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/
+    - https://makefiletutorial.com/
+    - http://mrbook.org/blog/tutorials/make/
+    - http://nuclear.mutantstargoat.com/articles/make/
 ** Global gtags
   - sudo pacman -S ctags python-pygments
   - See spacemacs help on gtags
