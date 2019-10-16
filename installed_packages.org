@@ -48,10 +48,15 @@ sudo pip install virtualenvwrapper
 ** DONE Nitrogen not always restores background
    CLOSED: [2019-10-01 Tue 15:02]
    exec --no-startup-id feh --bg-fill $(head -n 2 .config/nitrogen/bg-saved.cfg | tail -n 1 | cut -c 6-) 
-** TODO Backlight
+** DONE Backlight
+   CLOSED: [2019-10-11 Fri 22:03]
    - Install light
    - Add user to video group
    - Change the key shortcuts
+** DONE Change black Theme
+   CLOSED: [2019-10-11 Fri 22:03]
+   - lxappearance
+   - edit .config/gtk-3.0/setings.ini to not prefer dark themes
 * Development
 ** Node/Javascript
    - sudo pacman -S nodejs npm
