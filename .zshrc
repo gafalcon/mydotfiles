@@ -159,7 +159,7 @@ export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1
 # alias android-studio='/mnt/Shared/Programs/android-studio/bin/studio.sh'
 #export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 #export PATH="$PATH:/opt/lampp/bin" # Add lampp bin to PATH
-export PATH="$PATH:$HOME/.config/composer/vendor/bin:/opt/spring/bin" # php composer commands
+# export PATH="$PATH:$HOME/.config/composer/vendor/bin:/opt/spring/bin" # php composer commands
 #export LD_LIBRARY_PATH=/usr/local/lib
 eval "$(fasd --init auto)"
 alias o="a -e xdg-open"
