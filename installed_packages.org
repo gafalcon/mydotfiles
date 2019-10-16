@@ -66,6 +66,14 @@ sudo pip install virtualenvwrapper
     - spacemacs: typescript layer
 **** Tutorials
      https://coursetro.com/posts/code/174/Angular-8-Tutorial-&-Crash-Course check ~/Documents/Web/angular/myapp
+     - Role based authentication:https://jasonwatmore.com/post/2019/08/06/angular-8-role-based-authorization-tutorial-with-example#environment-ts 
+*** React
+    - create-react-app: npm i -g create-react-app
+*** Express
+**** Create express project:
+     - sudo npm i -g express-generator-api
+**** Express with angular
+     https://scotch.io/tutorials/mean-app-with-angular-2-and-the-angular-cli
 ** C/C++
 *** pacman -S gdb
 *** Makefiles
@@ -98,6 +106,8 @@ sudo pip install virtualenvwrapper
      @RequestBody ClassName obj: to get json post body. 
      @RequestBody Map<String, Obj> params: if dont wanna create a class for the json post
      @RequestBody Map<String, Obj> []params: if dont wanna create a class for the json array
+**** Security
+     https://www.callicoder.com/spring-boot-spring-security-jwt-mysql-react-app-part-2/
 
 ** Little os book
    - sudo pacman -S nasm cdrkit
