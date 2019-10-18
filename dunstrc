@@ -3,7 +3,7 @@
     frame_width = 3
     frame_color = "#788388"
     
-    font = Noto Sans 10
+    font = Noto Sans 10, Noto Emoji 10
     
     # Allow a small subset of html markup:
     #   <b>bold</b>
