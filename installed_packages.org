@@ -43,6 +43,11 @@ sudo pip install virtualenvwrapper
 - sudo pacman -S tmux
 - ln -s mydotfiles/.tmux.conf .tmux.conf
 - Install powerline: pip install powerline-status
+** Xresources
+*** Themes
+    - http://terminal.sexy/
+    - https://github.com/logico-dev/Xresources-themes
+    - https://www.reddit.com/r/unixporn/comments/32pjq3/how_do_i_get_those_pretty_terminals/ 
 * Fstab
   UUID=D0A47F68A47F4FC8   /mnt/Shared  ntfs-3g   uid=1000,gid=1000,dmask=022,fmask=022 0 0
 * Fixes
@@ -166,8 +171,12 @@ sudo pip install virtualenvwrapper
     https://stackoverflow.com/questions/42880479/cant-connect-to-mysql-container-from-localhost
 ** Postman
    yay -S postman
+** Nginx
+*** Proxy: https://gist.github.com/soheilhy/8b94347ff8336d971ad0
+*** Serve angular static files: https://medium.com/@thatisuday/serving-angular-app-on-nginx-server-7656166c2f1c
 * Apps
 ** Dropbox
    - Store epub books to read on tablet
    - yay -S dropbox
    - thunar-dropbox if want thunar integration
+** Thunderbird
