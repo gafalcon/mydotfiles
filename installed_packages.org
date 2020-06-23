@@ -34,8 +34,12 @@ playerctl
 - sudo pacman -S firefox
 - Hide tabs:https://superuser.com/questions/1268860/firefox-quantum-57-how-to-toggle-all-toolbars-with-a-keyboard-shortcut-li
 - Enable userChrome.css https://superuser.com/questions/1268860/firefox-quantum-57-how-to-toggle-all-toolbars-with-a-keyboard-shortcut-li
-* Pip packages
-sudo pip install virtualenvwrapper
+* Python
+** jupyter
+   http://queirozf.com/entries/jupyter-kernels-how-to-add-change-remove
+   https://github.com/ipython-contrib/jupyter_contrib_nbextensions
+** Pip packages
+   sudo pip install virtualenvwrapper
 * TODO Polybar
 - copy configuration and remove border and margin
 - polybar example
@@ -69,6 +73,10 @@ sudo pip install virtualenvwrapper
    CLOSED: [2019-10-11 Fri 22:03]
    - lxappearance
    - edit .config/gtk-3.0/setings.ini to not prefer dark themes
+** DONE Volume keys
+   CLOSED: [2020-03-07 Sat 21:54]
+   - State "DONE"       from              [2020-03-07 Sat 21:54]
+*** install pulseaudio-ctl
 * Development
 ** Node/Javascript
    - sudo pacman -S nodejs npm
@@ -86,6 +94,8 @@ sudo pip install virtualenvwrapper
      - sudo npm i -g express-generator-api
 **** Express with angular
      https://scotch.io/tutorials/mean-app-with-angular-2-and-the-angular-cli
+*** Sockets
+    - https://gist.github.com/tedmiston/5935757
 ** C/C++
 *** pacman -S gdb
 *** Makefiles
@@ -120,7 +130,8 @@ sudo pip install virtualenvwrapper
      @RequestBody Map<String, Obj> []params: if dont wanna create a class for the json array
 **** Security
      https://www.callicoder.com/spring-boot-spring-security-jwt-mysql-react-app-part-2/
-
+*** Sockets
+    - https://cs.lmu.edu/~ray/notes/javanetexamples/
 ** Little os book
    - sudo pacman -S nasm cdrkit
    - yay -S bochs-sdl
@@ -180,3 +191,4 @@ sudo pip install virtualenvwrapper
    - yay -S dropbox
    - thunar-dropbox if want thunar integration
 ** Thunderbird
+* Fonts

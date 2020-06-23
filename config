@@ -49,12 +49,12 @@ bindsym $mod+z exec --no-startup-id morc_menu
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
 ################################################################################################
 
-exec --no-startup-id volumeicon
+# exec --no-startup-id volumeicon
 # exec --no-startup-id emacs
 exec --no-startup-id firefox
 exec --no-startup-id udiskie
-# exec --no-startup-id "~/my_scripts/launch_polybar"
-exec --no-startup-id polybar main
+exec --no-startup-id "~/.config/polybar/launch.sh"
+# exec --no-startup-id polybar main
 exec --no-startup-id dunst
 bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 # Start Applications
@@ -252,6 +252,8 @@ for_window [class="Thus"] floating enable border normal
 for_window [class="Firefox" window_role="About"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="Cerebro"] floating enable
+for_window [title="Microsoft Teams Notification" class="microsoft teams - preview"] floating enable
+for_window [title="Microsoft Teams Notification" class="Microsoft Teams - Preview"] floating enable 
 # for_window [class="(?i)virtualbox"] floating enable border normal
 
 # Set shut down, restart and locking features
@@ -306,7 +308,7 @@ exec --no-startup-id syndaemon -i 1 -k -d
 # exec_always --no-startup-id sbxkb
 exec --no-startup-id compton -b
 # exec --no-startup-id yakuake 
-exec --no-startup-id dropbox start
+#exec --no-startup-id dropbox start
 exec --no-startup-id urxvt -e tmux
 
 exec --no-startup-id pamac-tray
@@ -382,9 +384,9 @@ mode "$mode_gaps_outer" {
 # Mouse kill window
 bindsym --whole-window $mod+button2 kill
 # Pulse Audio controls
-# bindsym XF86AudioRaiseVolume exec --no-startup-id "pulseaudio-ctl up" 
-# bindsym XF86AudioLowerVolume exec --no-startup-id "pulseaudio-ctl down" 
-# bindsym XF86AudioMute exec --no-startup-id  "pulseaudio-ctl mute"
+bindsym XF86AudioRaiseVolume exec --no-startup-id "pulseaudio-ctl up" 
+bindsym XF86AudioLowerVolume exec --no-startup-id "pulseaudio-ctl down" 
+bindsym XF86AudioMute exec --no-startup-id  "pulseaudio-ctl mute"
 
 #Disable focus on mouse hover
 focus_follows_mouse yes
