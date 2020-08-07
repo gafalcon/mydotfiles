@@ -3,7 +3,7 @@
     frame_width = 3
     frame_color = "#788388"
     
-    font = Liberation Mono 10#, Noto Sans 10, Noto Emoji 10
+    font = Liberation Mono 12#, Noto Sans 10, Noto Emoji 10
     
     # Allow a small subset of html markup:
     #   <b>bold</b>
@@ -69,7 +69,7 @@
     # the top and down respectevly.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "400x4-25+25"
+    geometry = "450x4-25+25"
     
     # Corner radius in pixel size.
     corner_radius=5
