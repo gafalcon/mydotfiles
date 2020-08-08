@@ -192,3 +192,18 @@ playerctl
    - thunar-dropbox if want thunar integration
 ** Thunderbird
 * Fonts
+* FZF and FD
+** FZF
+   - https://github.com/junegunn/fzf
+   - sudo pacman -S fzf
+*** .zshrc
+    source /usr/share/fzf/key-bindings.zsh
+    source /usr/share/fzf/completion.zsh
+    export FZF_DEFAULT_COMMAND='fd --type f' #Need to install fd.
+    export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+*** Keybindings:
+    - C-t: autocomplete files
+    - C-r: autocomplete history
+    - Alt-c: fuzzy cd
+    - <TAB>: on a fuzzy filter to select more than one option
+    - **<TAB>: to start fzf as well.

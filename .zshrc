@@ -178,3 +178,7 @@ export NVM_DIR="$HOME/.nvm"
 ## fzf fuzzy finder
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
+export FZF_DEFAULT_COMMAND='fd --type f'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+#If you want the command to follow symbolic links, and don't want it to exclude hidden files, use the following command:
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
