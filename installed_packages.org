@@ -30,6 +30,14 @@ playerctl
 - sudo pacman -S emacs
 - git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 - sudo ln -s mydotfiles/.spacemacs .spacemacs
+** Search
+*** Ripgrep 
+  - install ripgrep
+  - add helm-rg, projectile-ripgrep to spacemacs
+*** Ag, ack
+    - pacman -S ack
+    - pacman -S the_silver_surfer
+    - <SPC> s (a|k): to search helm with ack or ag
 * Firefox
 - sudo pacman -S firefox
 - Hide tabs:https://superuser.com/questions/1268860/firefox-quantum-57-how-to-toggle-all-toolbars-with-a-keyboard-shortcut-li
