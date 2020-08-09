@@ -38,6 +38,18 @@ playerctl
     - pacman -S ack
     - pacman -S the_silver_surfer
     - <SPC> s (a|k): to search helm with ack or ag
+** Jumping
+   - C-o C-i: jumping between positions in jump list
+   - SPC j j: jump to char
+   - SPC j w: jump to word
+   - SPC j i: jump to a title, a function definition, a class, etc. anywhere inside the current buffer with helm. Type patterns to filter down the list and press RET to jump.
+   - SPC s s: Swoop, search the current file for patterns, and navigate to the matching lines. Use Ctrl n and Ctrl p to navigate to the next and previous search results. You can do a lot with this feature, but you can also use it to intuitively move around your file.
+   - *: Search the word under the cursor jumping forward.
+   - #: Search the word under the cursor jumping backward.
+   - Ctrl d: Move down half a page
+   - Ctrl u: Move up half a page
+   - Ctrl f: Move forward one page.
+   - Ctrl b: Move back one page.
 * Firefox
 - sudo pacman -S firefox
 - Hide tabs:https://superuser.com/questions/1268860/firefox-quantum-57-how-to-toggle-all-toolbars-with-a-keyboard-shortcut-li
